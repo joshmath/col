@@ -1,0 +1,456 @@
+@import "bourbon",
+"bitters/base";
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.phone-wrapper {
+    width: 400px;
+    margin: 0 auto 25px;
+    overflow-x: hidden;
+    position: relative;
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    max-width: auto;
+}
+
+h2.section-title {
+    margin-bottom: 15px;
+    font-size: 36px;
+    line-height: 36px;
+}
+
+
+/*==============================
+=            Header            =
+==============================*/
+
+#overlay {
+    background: rgba(0, 0, 0, .75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+    display: none;
+    opacity: 0;
+    transition: all .2s;
+}
+
+#overlay.overlay-show {
+    opacity: 1;
+    display: block;
+}
+
+header {
+    position: relative;
+    select {
+        margin-bottom: 5px;
+    }
+    .secondary-info {
+        display: flex;
+        flex-direction: column;
+        .logo-wrapper {
+            position: relative;
+            text-align: center;
+            order: 2;
+            padding: 10px 0;
+            img {
+                max-width: 75%;
+            }
+            .hamburglar {
+                position: absolute;
+                top: 15px;
+                right: 5px;
+            }
+        }
+        .header-social-wrapper {
+            display: none;
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 10px 5px;
+                li+li {
+                    padding-left: 8px;
+                }
+                a {
+                    padding: 3px;
+                    clip-path: circle(10px at center);
+                }
+                .facebook {
+                    background: $blue;
+                    color: #fff;
+                }
+                .instagram {
+                    background: $green;
+                    color: #fff;
+                }
+                .twitter {
+                    background: #64CBE6;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 75%;
+        background: $blue;
+        padding: 10px;
+        z-index: 5;
+        transform: translate3d(-100%, 0, 0);
+        transition: all .2s;
+        li {
+            border-bottom: 1px solid shade($blue, 20%);
+            padding: 10px 0;
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        &.nav-show {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+
+.header-search-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    input {
+        margin-bottom: 0;
+    }
+    .search-btn {
+        background: $yellow;
+        color: #fff;
+        padding: 6px 10px;
+    }
+}
+
+
+/*=====  End of Header  ======*/
+
+
+/*=================================
+=            Hero Unit            =
+=================================*/
+
+.hero {
+    background: url(../images/hero-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 200px;
+    padding: 10px;
+    color: #fff;
+    h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    h1 {
+        margin: 0;
+        margin-bottom: 50px;
+        letter-spacing: 1px;
+        font-size: 50px;
+        line-height: 50px;
+        text-transform: uppercase;
+        // span {
+        //     display: none;
+        // }
+        // span:first-of-type {
+        //     display: block;
+        // }
+    }
+    .hero-info-box {
+        background: rgba(113, 151, 62, .82);
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .hero-search-wrapper {
+        @extend .header-search-wrapper;
+        input {
+            background: rgba(250, 250, 250, .75);
+            border-radius: 0;
+        }
+    }
+}
+
+
+/**
+ *
+ * Word Rotater
+ *
+ */
+
+.word-rotator {
+    display: inline-block;
+    min-width: 350px;
+    text-align: left;
+    position: relative;
+}
+
+.word-rotator span {
+    position: absolute;
+    font-weight: bold;
+    bottom: 0;
+    opacity: 0;
+    -webkit-animation: rotateWord 18s linear infinite 0s;
+    animation: rotateWord 18s linear infinite 0s;
+}
+
+@media (min-width: 1024px) {
+    .word-rotator span {
+        top: 0px;
+    }
+}
+
+.word-rotator span:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.word-rotator span:nth-child(3) {
+    animation-delay: 6s;
+}
+
+.word-rotator span:nth-child(4) {
+    animation-delay: 9s;
+}
+
+.word-rotator span:nth-child(5) {
+    animation-delay: 12s;
+}
+
+.word-rotator span:nth-child(6) {
+    animation-delay: 15s;
+}
+
+@keyframes rotateWord {
+    0% {
+        opacity: 0;
+    }
+    2% {
+        opacity: 0;
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    5% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    17% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    20% {
+        opacity: 0;
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px);
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+/*=====  End of Hero Unit  ======*/
+
+.home-section {
+    margin-top: 20px;
+}
+
+.home-section+.home-section {
+    margin-top: 40px;
+}
+
+
+/*=====================================
+=            Featured News            =
+=====================================*/
+
+.home-section h2.section-title {
+    color: $green;
+    &::before {
+        background: $green;
+    }
+}
+
+
+/**
+ *
+ * Slider
+ *
+ */
+
+.featured-news-slider {
+    // margin-top: 10px;
+}
+
+.featured-news--slide {
+    position: relative;
+    h3.featured-news--slide--title {
+        color: #fff;
+        bottom: 20px;
+        left: 15px;
+        position: absolute;
+        line-height: 1.375em;
+    }
+}
+
+.featured-news-additional {
+    background: $blue;
+    padding: 10px 15px;
+    li {
+        border-bottom: 1px solid shade($blue, 15%);
+        padding: 10px 0;
+        line-height: 1.375em;
+        font-weight: 300;
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+
+/*=====  End of Featured News  ======*/
+
+
+/*=======================================
+=            Upcoming Events            =
+=======================================*/
+
+.upcoming-events h2.section-title {
+    color: $yellow;
+    &::before {
+        background: $yellow;
+    }
+}
+
+
+/**
+ *
+ * Event Card
+ *
+ */
+
+.event-cards-wrapper {
+    margin-bottom: 25px;
+}
+
+.event-card {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #bababa;
+    .event-card--header {
+        background: $green;
+        h3 {
+            color: #fff;
+            text-transform: uppercase;
+            padding: 10px;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+    }
+    .event-card--details {
+        padding: 20px 10px;
+        .event-card--details--title {
+            color: #58595B;
+            text-transform: uppercase;
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+        .event-card--details--time {
+            color: #6D6E71;
+            font-weight: 300;
+            font-size: 16px;
+        }
+        .event-card--details--address {
+            font-style: normal;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 12px;
+            font-size: 14px;
+            line-height: 16px;
+            strong {
+                font-size: 16px;
+                line-height: 18px;
+            }
+        }
+    }
+}
+
+
+/*=====  End of Upcoming Events  ======*/
+
+
+/*=========================
+=            Upcoming Meetings            =
+=========================*/
+
+.upcoming-meetings {
+    // background: $orange;
+    // color: #fff;
+}
+
+.upcoming-meetings h2.section-title {
+    color: $orange;
+    &::before {
+        background: $orange;
+    }
+}
+
+.upcoming-meetings-video-wrapper {
+    margin-bottom: 20px;
+    figcaption {
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+}
+
+.upcoming-meeting--title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.upcoming-meeting--details {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.upcoming-meeting+.upcoming-meeting {
+    margin-top: 20px;
+}
+
+
+/*=====  End of Upcoming Meetings  ======*/
