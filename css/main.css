@@ -58,6 +58,14 @@ button, [type='button'], [type='reset'], [type='submit'] {
     color: #c56d25;
     border-color: #c56d25; }
 
+.btn--ghost--white {
+  color: #fff;
+  border-color: #fff; }
+  .btn--ghost--white:hover {
+    color: #70963E;
+    border-color: #fff;
+    background: #fff; }
+
 .btn--orange {
   background: #F6882E; }
   .btn--orange:hover {
@@ -179,6 +187,10 @@ dt {
 dd {
   margin: 0; }
 
+ul.bullets {
+  list-style-type: disc;
+  list-style-position: inside; }
+
 figure {
   margin: 0; }
 
@@ -230,6 +242,9 @@ h6 {
 p {
   margin: 0 0 0.75em; }
 
+ul + p {
+  margin-top: 0.75em; }
+
 a {
   color: #037ABD;
   -webkit-text-decoration-skip: ink;
@@ -241,6 +256,11 @@ a {
   a:focus {
     outline: none;
     outline-offset: none; }
+
+a.link-white {
+  color: #fff; }
+  a.link-white:hover {
+    color: #fff; }
 
 hr {
   border-bottom: 1px solid #ddd;
@@ -279,10 +299,23 @@ img {
   width: 100%;
   max-width: auto; }
 
+/*=======================================
+=            Utility Classes            =
+=======================================*/
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+/*=====  End of Utility Classes  ======*/
 h2.section-title {
   margin-bottom: 15px;
   font-size: 36px;
   line-height: 36px; }
+
+.section-subtitle {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px; }
 
 /*==============================
 =            Header            =
@@ -410,7 +443,7 @@ header {
   background-size: cover;
   background-position: center center;
   min-height: 200px;
-  padding: 10px;
+  padding: 30px 10px;
   color: #fff; }
   .hero h2 {
     font-size: 30px;
@@ -648,3 +681,54 @@ header {
   margin-top: 20px; }
 
 /*=====  End of Upcoming Meetings  ======*/
+/*=======================================
+=            Notices Section            =
+=======================================*/
+.notices h2.section-title {
+  color: #037ABD; }
+  .notices h2.section-title::before {
+    background: #037ABD; }
+
+.notice-section-title {
+  background: #F6C22F;
+  text-transform: uppercase;
+  padding: 10px;
+  color: #fff;
+  margin-bottom: 15px; }
+
+.notice-title {
+  color: #F6C22F;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  line-height: 1em; }
+
+.notice-subtitle {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #6D6E71;
+  letter-spacing: 1px; }
+
+.notice-details {
+  margin-top: 20px; }
+
+/*=====  End of Notices Section  ======*/
+/*===========================================
+=            Departments Section            =
+===========================================*/
+.home-section.department img {
+  display: block; }
+
+.home-section.department .featured-department-wrapper {
+  background: #70963E;
+  color: #fff;
+  padding: 25px 15px; }
+
+.home-section.department .section-subtitle {
+  line-height: 1em; }
+
+.home-section.department h2.section-title {
+  color: #fff; }
+  .home-section.department h2.section-title::before {
+    content: none; }
+
+/*=====  End of Departments Section  ======*/

@@ -67,6 +67,16 @@ $_button-background-color-hover: shade($action-color, 20%);
   }
 }
 
+.btn--ghost--white{
+  color: #fff;
+  border-color: #fff;
+  &:hover{
+    color: $green;
+    border-color: #fff;
+    background: #fff;
+  }
+}
+
 .btn--orange{
   background: $orange;  
   &:hover{
