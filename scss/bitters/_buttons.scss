@@ -56,6 +56,10 @@ $_button-background-color-hover: shade($action-color, 20%);
   border: 1px solid $light-gray;
   font-size: 12px;
   text-decoration: none;
+  letter-spacing: 1px;
+  @include huge{
+    font-size: 14px;
+  }
 }
 
 .btn--ghost--orange{
