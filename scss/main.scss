@@ -14,39 +14,39 @@ html {
 //     position: relative;
 //     height: 100%;
 // }
-
 img {
     width: 100%;
     max-width: auto;
 }
 
+
 /*=======================================
 =            Utility Classes            =
 =======================================*/
 
-.hide--huge{
-	@include huge{
-		display: none;
-	}
+.hide--huge {
+    @include huge {
+        display: none;
+    }
 }
 
 
-.uppercase{
-	text-transform: uppercase;
-	letter-spacing: 1px;
+.uppercase {
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
+
 
 /*=====  End of Utility Classes  ======*/
-
 
 h2.section-title {
     margin-bottom: 15px;
     font-size: 36px;
     line-height: 36px;
-    @include huge{
-    	font-size: 48px;
-    	line-height: 48px;
-    	margin-bottom: 25px !important;
+    @include huge {
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 25px !important;
     }
 }
 
@@ -56,15 +56,15 @@ h2.section-title {
     letter-spacing: 1px;
 }
 
+
 /*===========================================
 =            Slick Slider Custom            =
 ===========================================*/
 
-
-.slick-track{
+.slick-track {
     display: flex;
-    
-    .slick-slide{
+
+    .slick-slide {
         display: flex;
         flex-direction: column;
         height: auto;
@@ -73,13 +73,14 @@ h2.section-title {
     }
 }
 
-.slick-list{
-	margin: 0 -15px;
+.slick-list {
+    margin: 0 -15px;
 }
 
-.slick-slide{
-	margin: 0 15px;
+.slick-slide {
+    margin: 0 15px;
 }
+
 
 /*=====  End of Slick Slider Custom  ======*/
 
@@ -114,54 +115,54 @@ header {
     .secondary-info {
         display: flex;
         flex-direction: column;
-        @include tablet{
-        	flex-direction: row;
-        	align-items: center;
-        	justify-content: space-between;
-        	padding:15px;
+        @include tablet {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
         }
-        @include huge{
-        	width: $contain-width;
-        	margin: $center;
+        @include huge {
+            width: $contain-width;
+            margin: $center;
         }
         .logo-wrapper {
             position: relative;
             text-align: center;
             order: 2;
             padding: 10px 0;
-            @include tablet{
-            	order: 1;
-            	text-align: left;
+            @include tablet {
+                order: 1;
+                text-align: left;
             }
             img {
                 max-width: 75%;
-                @include tablet{
-                	max-width: 215px;
+                @include tablet {
+                    max-width: 215px;
                 }
             }
             .hamburglar {
                 position: absolute;
                 top: 15px;
                 right: 5px;
-                @include tablet{
-                	display: none;
+                @include tablet {
+                    display: none;
                 }
             }
         }
-        .header-links-wrapper{
-        	@include tablet{ 
-        		order: 2;
-        	}
+        .header-links-wrapper {
+            @include tablet {
+                order: 2;
+            }
         }
-        .header-search-wrapper{
-        	@include tablet{
-        		width: 250px;
-        	}
+        .header-search-wrapper {
+            @include tablet {
+                width: 250px;
+            }
         }
         .header-social-wrapper {
             display: none;
-            @include tablet{
-            	display:block;            	
+            @include tablet {
+                display: block;
             }
             ul {
                 display: flex;
@@ -174,10 +175,10 @@ header {
                 a {
                     padding: 3px;
                     clip-path: circle(10px at center);
-                    @include huge{
-                    	font-size: 1.25em;
-                    	padding: 5px;
-                    	clip-path: circle(13px at center);                    	
+                    @include huge {
+                        font-size: 1.25em;
+                        padding: 5px;
+                        clip-path: circle(13px at center);
                     }
                 }
                 .facebook {
@@ -205,31 +206,31 @@ header {
         z-index: 5;
         transform: translate3d(-100%, 0, 0);
         transition: all .2s;
-        @include tablet{
-        	position: relative;
-        	top: auto;
-        	left: auto;
-        	width: 100%;
-        	transform: none;
-        	background: #00354C;
-        	ul{
-        		display:flex;
-        		align-items: center;
-        		justify-content: space-between;
-        		li{
-        			border-bottom: none;
-        			padding: 0;
-        			a{
-        				font-size: 14px;
-        			}
-        		}
-        	}
+        @include tablet {
+            position: relative;
+            top: auto;
+            left: auto;
+            width: 100%;
+            transform: none;
+            background: #00354C;
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                li {
+                    border-bottom: none;
+                    padding: 0;
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
         }
-        @include huge{
-        	ul{
-        		width: $contain-width;
-        		margin: 0 auto;
-        	}
+        @include huge {
+            ul {
+                width: $contain-width;
+                margin: 0 auto;
+            }
         }
         li {
             border-bottom: 1px solid shade($blue, 20%);
@@ -266,6 +267,7 @@ header {
 }
 
 
+
 /*=====  End of Header  ======*/
 
 
@@ -273,58 +275,58 @@ header {
 =            Footer            =
 ==============================*/
 
-footer{
+footer {
     background: #00354C;
     padding: 30px 20px;
-    @include huge{
+    @include huge {
         padding: 30px 0;
     }
-    .footer-wrapper{
+    .footer-wrapper {
         margin: $center;
-        @include tablet{
-            display:flex;
+        @include tablet {
+            display: flex;
             align-items: center;
             justify-content: flex-start;
         }
-        @include huge{
+        @include huge {
             width: $contain-width;
         }
     }
-    .footer-logo{
+    .footer-logo {
         text-align: center;
-        img{
+        img {
             max-width: 250px;
         }
-        @include tablet{
+        @include tablet {
             text-align: left;
-            img{
+            img {
                 max-width: 100%;
             }
         }
     }
-    .footer-nav{
+    .footer-nav {
         flex: 1 0;
-        @include tablet{
+        @include tablet {
             padding-left: 50px;
-        }        
-        ul{
+        }
+        ul {
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
             margin-top: 35px;
-            @include tablet{
+            @include tablet {
                 margin-top: 0;
                 flex-wrap: nowrap;
             }
-            li{
+            li {
                 flex: 0 0 50%;
                 text-align: center;
-                @include tablet{
+                @include tablet {
                     flex: 1 0 auto;
                 }
             }
-            a{
+            a {
                 color: #fff;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -334,7 +336,25 @@ footer{
     }
 }
 
+
 /*=====  End of Footer  ======*/
+
+
+/*==================================
+=            Search Bar            =
+==================================*/
+
+.search-item-type {
+    border-left: 4px solid transparent;
+}
+
+.search-item-title,
+.search-item-type {
+    padding: .75rem;
+}
+
+
+/*=====  End of Search Bar  ======*/
 
 
 /*=================================
@@ -348,35 +368,35 @@ footer{
     min-height: 200px;
     padding: 30px 10px;
     color: #fff;
-    @include tablet{
-    	height: 450px;
-    	padding: 50px;
+    @include tablet {
+        height: 450px;
+        padding: 50px;
     }
-    @include desktop{
-    	height: 600px;
-    	display: flex;
-    	align-items: center;
-    	justify-content: center;
+    @include desktop {
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    @include huge{
-    	height: 700px;
+    @include huge {
+        height: 700px;
     }
-    .hero-content-wrapper{
-    	@include huge{
-    		margin: 0 auto;
-    		width: $contain-width;
-    	}
+    .hero-content-wrapper {
+        @include huge {
+            margin: 0 auto;
+            width: $contain-width;
+        }
     }
     h2 {
         font-size: 30px;
         line-height: 30px;
-        @include tablet{
-        	font-size: 60px;
-        	line-height: 60px;
+        @include tablet {
+            font-size: 60px;
+            line-height: 60px;
         }
-        @include huge{
-        	font-size: 90px;
-        	line-height: 90px;
+        @include huge {
+            font-size: 90px;
+            line-height: 90px;
         }
     }
     h1 {
@@ -386,55 +406,55 @@ footer{
         font-size: 50px;
         line-height: 50px;
         text-transform: uppercase;
-        @include tablet{
-        	font-size: 100px;
-        	line-height: 100px;
+        @include tablet {
+            font-size: 100px;
+            line-height: 100px;
         }
-        @include desktop{
-        	font-size: 130px;
-        	line-height: 110px;
+        @include desktop {
+            font-size: 130px;
+            line-height: 110px;
         }
-        @include huge{
-        	font-size: 170px;
-        	line-height: 150px;
+        @include huge {
+            font-size: 170px;
+            line-height: 150px;
         }
     }
-    .hero-info-wrapper{
-    	@include desktop{
-    		display: flex;
-    		align-items:flex-end;
-    		justify-content: space-between;
-    	}
+    .hero-info-wrapper {
+        @include desktop {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
     }
     .hero-info-box {
         background: rgba(113, 151, 62, .82);
         padding: 10px;
         margin-bottom: 10px;
-        @include tablet{
-        	padding: 30px 30px;
-			margin-bottom: 10px;
-			margin-top: 10px;
-			h3{
-				font-size: 30px;
-				line-height: 38px;
-			}
+        @include tablet {
+            padding: 30px 30px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            h3 {
+                font-size: 30px;
+                line-height: 38px;
+            }
         }
-        @include desktop{        	
-			margin-bottom: 0;
-			margin-top: 50px;
-			width: 45%;	
-			order:2;		
-			h3{
-				font-size: 24px;
-				line-height: 30px;
-			}
+        @include desktop {
+            margin-bottom: 0;
+            margin-top: 50px;
+            width: 45%;
+            order: 2;
+            h3 {
+                font-size: 24px;
+                line-height: 30px;
+            }
         }
-        @include huge{        	
-			width: 455px;	
-			h3{
-				font-size: 30px;
-				line-height: 38px;
-			}
+        @include huge {
+            width: 455px;
+            h3 {
+                font-size: 30px;
+                line-height: 38px;
+            }
         }
     }
     .hero-search-wrapper {
@@ -443,29 +463,30 @@ footer{
         input {
             background: rgba(250, 250, 250, .75);
             border-radius: 0;
-            @include  tablet{
-            	font-size: 24px;
+            @include tablet {
+                font-size: 24px;
             }
         }
-        @include desktop{
-        	order: 1;
-        	flex: 1 0 auto;
-        	max-width: calc(100% - 500px);
-        	margin-bottom: 50px;
+        @include desktop {
+            order: 1;
+            flex: 1 0 auto;
+            max-width: calc(100% - 500px);
+            margin-bottom: 50px;
         }
-        .search-btn{
-        	@include tablet{
-    		    display: flex;
-			    align-items: center;
-			    justify-content: center;	
-			    .svg-inline--fa {
-				    width: 2em;
-				    height: 1.5em;
-				}		
-        	}
+        .search-btn {
+            @include tablet {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .svg-inline--fa {
+                    width: 2em;
+                    height: 1.5em;
+                }
+            }
         }
     }
 }
+
 
 
 /**
@@ -550,15 +571,20 @@ footer{
 
 
 
+
 /*=====  End of Hero Unit  ======*/
 
-.main-content{
-	padding-left: 10px;
-	padding-right: 10px;	
-	@include desktop{
-		margin-top: 50px;
+.main-content {
+    padding-left: 40px;
+    padding-right: 40px;
+    @include tablet{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    @include desktop {
+        margin-top: 50px;
         margin-bottom: 75px;
-	}
+    }
 }
 
 .home-section {
@@ -567,73 +593,75 @@ footer{
 
 .home-section+.home-section {
     margin-top: 40px;
-    @include desktop{
-    	margin-top: 75px !important;
+    @include desktop {
+        margin-top: 75px !important;
     }
 }
+
 
 
 /*==========================================
 =            Most Visited Links            =
 ==========================================*/
 
-#most-visited{
-	ul{
-		display:flex;
-		align-items:stretch;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		@include desktop{
-			flex-wrap: nowrap;
-		}
-	}
-	li{
-		flex: 1 0 50%;	
-		font-size: 14px;	
-		@include tablet{
-			flex: 1 0 33.333%;		
-		}
-		@include desktop{
-			flex: 1 0 16.66667%;
-			font-size: 1em;		
-		}
-		display:flex;
-		align-items:center;
-		justify-content: center;
-		line-height: 1em;
-		background: $blue;
-		padding: 25px;
-		text-align: center;
-		text-transform: uppercase;
-		transition: all .2s;
-		&:hover{
-			@include desktop{
-				z-index: 12;
-				transform: translateY(5px);
-				transform: scale(1.1);
-			}
-		}
-		&:nth-of-type(2){
-			background: #317FA5;
-		}
-		&:nth-of-type(3){
-			background: #46858E;
-		}
-		&:nth-of-type(4){
-			background: #568A76;
-		}
-		&:nth-of-type(5){
-			background: #64905A;
-		}
-		&:nth-of-type(6){
-			background: #70963E;
-		}
-		a{
-			color: #fff;
-			text-decoration: none;
-		}
-	}
+#most-visited {
+    ul {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include desktop {
+            flex-wrap: nowrap;
+        }
+    }
+    li {
+        flex: 1 0 50%;
+        font-size: 14px;
+        @include tablet {
+            flex: 1 0 33.333%;
+        }
+        @include desktop {
+            flex: 1 0 16.66667%;
+            font-size: 1em;
+        }
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        line-height: 1em;
+        background: $blue;
+        padding: 25px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all .2s;
+        &:hover {
+            @include desktop {
+                z-index: 12;
+                transform: translateY(5px);
+                transform: scale(1.1);
+            }
+        }
+        &:nth-of-type(2) {
+            background: #317FA5;
+        }
+        &:nth-of-type(3) {
+            background: #46858E;
+        }
+        &:nth-of-type(4) {
+            background: #568A76;
+        }
+        &:nth-of-type(5) {
+            background: #64905A;
+        }
+        &:nth-of-type(6) {
+            background: #70963E;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
 }
+
 
 /*=====  End of Most Visited Links  ======*/
 
@@ -647,85 +675,63 @@ footer{
     &::before {
         background: $green;
     }
-    @include huge{
-    	width: $contain-width;
-    	margin: $center;
+    @include huge {
+        width: $contain-width;
+        margin: $center;
     }
 }
 
-.featured-news{
-	position: realtive;
-	z-index: 2;
+.featured-news {
+    position: realtive;
+    z-index: 2;
 }
 
-.featured-news-wrapper{
-	@include desktop{
-		display:grid;
-		grid-template-columns: repeat(7, 1fr);
-		grid-template-rows: repeat(12, 1fr);
-		position: relative;
-		z-index: 2;
-	}
-	@include huge{
-		width: 1300px;
-		margin: $center;
-		display:grid;
-		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: repeat(12, 1fr);
-	}
-}
-
-@include huge{
-.featured-news::after{
-	background: url(../images/news-bg.png) repeat;
-	content: "";
-	height: 900px;
-	display: block;
-	width: 100%;
-	position: absolute;
-	// z-index: 1;
-	margin-top: -600px;
-}
-}
-
-/**
- *
- * Slider
- *
- */
-
-.featured-news-slider {
-    // margin-top: 10px;
-    transition: all .2s;
-    @include desktop{
-    	grid-column-start: 1;
-    	grid-column-end: 6;
-    	grid-row-start: 1;
-    	grid-row-end: 12;
+.featured-news-wrapper {
+    @include desktop {
+        display: grid;
+        grid-template-columns: 2fr 100px 1fr;
+        grid-template-rows: 100%;
+        position: relative;
+        z-index: 2;
     }
-    @include huge{
-    	grid-column-start: 1;
-    	grid-column-end: 9;
-    	grid-row-start: 1;
-    	grid-row-end: 12;
+    @include huge {
+        width: 1300px;
+        margin: $center;
+        display: grid;
     }
 }
 
-.featured-news--slide {
+@include huge {
+    .featured-news::after {
+        background: url(../images/news-bg.png) repeat;
+        content: "";
+        height: 930px;
+        display: block;
+        width: 100%;
+        position: absolute; // z-index: 1;
+        margin-top: -630px;
+    }
+}
+
+.featured-story-wrapper{
     position: relative;
-    h3.featured-news--slide--title {
-        color: #fff;
-        bottom: 20px;
-        left: 15px;
+    height: calc(100% - 100px);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    .featured-news--slide--title{
         position: absolute;
-        line-height: 1.375em;
-        @include desktop{
-        	font-size: 1.75rem;
-			padding-right: 225px;
-        }
-        @include huge{
-        	font-size: 2em;
-			padding-right: 150px;
+        bottom: 25px;
+        left: 25px;
+        color: #fff;
+        padding-right: 150px;
+        font-size: 1.75em;
+    }
+    img {
+        @include desktop {
+            object-fit: cover;
+            height: 100%;
         }
     }
 }
@@ -733,37 +739,40 @@ footer{
 .featured-news-additional {
     background: $blue;
     padding: 10px 15px;
-    @include desktop{
-    	grid-column-start:5;
-    	grid-column-end: 8;
-    	grid-row-start: 4;
-    	grid-row-end: 13;
-    	position:relative;
-    	z-index: 3;
-    	padding: 20px 25px;
-    	border-left: 15px solid #fff;
-    	border-top: 15px solid #fff;
+    @include desktop {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        position: relative;
+        z-index: 3;
+        padding: 20px 25px;
+        border-left: 15px solid #fff;
+        border-top: 15px solid #fff;
+
+        margin-top: 80px;
     }
-    @include huge{
-    	grid-column-start:8;
-    	grid-column-end: 13;
-    	grid-row-start: 4;
-    	grid-row-end: 13;    	
-    	padding: 25px 35px;
-    	border-left: 15px solid #e6e7e8;
-    	border-top: 15px solid #e6e7e8;
+    @include huge {
+        // grid-column-start: 8;
+        // grid-column-end: 13; // grid-row-start: 1;
+        // grid-row-end: 4;     
+        padding: 25px 35px;
+        border-left: 15px solid #e6e7e8;
+        border-top: 15px solid #e6e7e8;
+
+        margin-top: 100px;
     }
     li {
         border-bottom: 1px solid shade($blue, 15%);
         padding: 10px 0;
         line-height: 1.375em;
         font-weight: 300;
-        @include desktop{
-        	line-height: 1.5em;
-        	font-size: 1.25em;
+        @include desktop {
+            line-height: 1.5em;
+            font-size: 1.25em;
         }
-        @include huge{
-        	font-size: 1.5em;
+        @include huge {
+            font-size: 1.5em;
         }
         &:last-of-type {
             border-bottom: none;
@@ -774,6 +783,7 @@ footer{
         text-decoration: none;
     }
 }
+
 
 
 /*=====  End of Featured News  ======*/
@@ -791,6 +801,7 @@ footer{
 }
 
 
+
 /**
  *
  * Event Card
@@ -801,12 +812,12 @@ footer{
     margin-bottom: 25px;
     width: 90%;
     margin: 0 auto;
-    @include huge{
-    	width: $contain-width;
+    @include huge {
+        width: $contain-width;
     }
 }
 
-.event-card {    
+.event-card {
     text-align: center;
     background: #fff;
     border: 1px solid #bababa;
@@ -822,10 +833,10 @@ footer{
     }
     .event-card--details {
         padding: 20px 10px;
-        @include tablet{
-        	display: flex;
-        	flex-direction: column;
-        	justify-content: space-between;
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .event-card--details--title {
             color: #58595B;
@@ -833,9 +844,9 @@ footer{
             font-size: 20px;
             line-height: 22px;
             letter-spacing: 1px;
-            @include tablet{
-            	font-size: 16px;
-            	line-height: 18px;
+            @include tablet {
+                font-size: 16px;
+                line-height: 18px;
             }
         }
         .event-card--details--time {
@@ -843,34 +854,36 @@ footer{
             font-weight: 300;
             font-size: 16px;
         }
+        .fa-map-marker{
+            display: block;
+            color: $orange;
+            margin-bottom: 8px;
+            text-align: center;
+            width: 100%;
+            margin: 10px 0;
+        }
         .event-card--details--address {
             font-style: normal;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 12px;
+            letter-spacing: 1px; // margin-top: 12px;
             font-size: 14px;
             line-height: 16px;
-            @include tablet{
-            	font-size: 12px;
-            	line-height: 14px;
+            @include tablet {
+                font-size: 12px;
+                line-height: 14px;
             }
             strong {
                 font-size: 16px;
                 line-height: 18px;
-                @include tablet{
-                	font-size: 14px;
-					line-height: 16px;
+                @include tablet {
+                    font-size: 14px;
+                    line-height: 16px;
                 }
             }
-            &::before {
-			    font-family: "Font Awesome 5 Solid";  content: "\f276";
-			    display:block;
-			    color: $orange;
-			    margin-bottom:8px;
-			}            
         }
     }
 }
+
 
 
 /*=====  End of Upcoming Events  ======*/
@@ -881,8 +894,7 @@ footer{
 =========================*/
 
 .upcoming-meetings {
-    // background: $orange;
-    // color: #fff;
+
 }
 
 .upcoming-meetings h2.section-title {
@@ -892,77 +904,89 @@ footer{
     }
 }
 
-.upcoming-meetings-section-wrapper{
-	@include desktop{
-		display:grid; 
-		grid-template-columns: repeat(7, 1fr);
-		grid-template-rows: repeat(15, 1fr);
-	}
-	@include huge{
-		width: $contain-width;
-		margin: $center;		
-		grid-template-columns: repeat(7, 1fr);
-		grid-template-rows: repeat(15, 1fr);
-	}
+.upcoming-meetings-section-wrapper {
+    @include desktop {
+        display: grid;
+        grid-template-columns: 1fr 80px 1fr;
+        grid-template-rows: 100%;
+    }
+    @include huge {
+        width: 1400px;
+        margin: $center;
+    }
 }
 
 .upcoming-meetings-video-wrapper {
     margin-bottom: 20px;
+    figure{
+        @include desktop{
+            height: calc(100% - 100px);
+        }
+    }
     figcaption {
         text-transform: uppercase;
         font-size: 12px;
         letter-spacing: 1px;
     }
-    @include desktop{
-    	grid-column-start: 1;
-    	grid-column-end: 5;
-    	grid-row-start: 1;
-    	grid-row-end: 14;
-    	position: relative;
-		z-index: 2;
-		img{ border-right: 15px solid #fff; border-bottom: 15px solid #fff;}
+    @include desktop {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        position: relative;
+        z-index: 2;        
+        img {
+            border-right: 15px solid #fff;
+            border-bottom: 15px solid #fff;
+            object-fit: cover;
+            height: 100%;
+        }
     }
-    @include huge{
-    	grid-column-start: 1;
-    	grid-column-end: 5;
-    	grid-row-start: 1;
-    	grid-row-end: 14;
-    	position: relative;
-		z-index: 2;
-		img{ border-right: 15px solid #fff; border-bottom: 15px solid #fff;}
-    }
+    // @include huge {
+    //     grid-column-start: 1;
+    //     grid-column-end: 5;
+    //     position: relative;
+    //     z-index: 2;
+    //     img {
+    //         border-right: 15px solid #fff;
+    //         border-bottom: 15px solid #fff;
+    //     }
+    // }
 }
 
-.upcoming-meetings-wrapper{
-	@include desktop{
-		grid-column-start: 4;
-		grid-column-end: 8;
-		grid-row-start: 2;
-		grid-row-end: 15;
-		position: relative;
-		z-index: 1;
-		background: url(../images/meetings-bg.png) repeat;
-		padding: 50px;
-		padding-left: 200px;
+.upcoming-meetings-wrapper {
+    @include desktop {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        position: relative;
+        z-index: 1;
+        background: url(../images/meetings-bg.png) repeat;
+        padding: 50px;
+        padding-left: 120px;
+        margin-top: 100px;
+        color: #fff;
 
-		color: #fff;
-
-		h2.section-title {
-		    color: #fff;
-		    width: auto;
-		    &::before {
-		        background: #fff;
-		    }
-		}
-	}
+        h2.section-title {
+            color: #fff;
+            width: auto;
+            &::before {
+                background: #fff;
+            }
+        }
+    }
 }
 
 .upcoming-meeting--title {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 16px;
-    @include huge{
-    	font-size: 20px;
+    line-height: 18px;
+    @include huge {
+        font-size: 20px;
+        line-height: 21px;
+        padding-bottom: 5px;
     }
 }
 
@@ -971,9 +995,9 @@ footer{
     letter-spacing: 1px;
     font-size: 14px;
     line-height: 20px;
-    @include huge{
-    	font-size: 16px;
-		line-height: 22px;
+    @include huge {
+        font-size: 16px;
+        line-height: 22px;
     }
 }
 
@@ -981,19 +1005,21 @@ footer{
     margin-top: 20px;
 }
 
-.upcoming-meeting + a{
-	@include desktop{
-		font-size: 15px;
-		margin-top: 25px;
-		color: #fff;
-		display:block;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-	}
+.upcoming-meeting+a {
+    @include desktop {
+        font-size: 15px;
+        margin-top: 25px;
+        color: #fff;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
 }
 
 
+
 /*=====  End of Upcoming Meetings  ======*/
+
 
 /*=======================================
 =            Notices Section            =
@@ -1006,48 +1032,61 @@ footer{
     }
 }
 
-.notices-section-wrapper{
-	@include huge{
-		width: $contain-width;
-		margin: $center;
+.notices-section-wrapper {
+    @include desktop {
+        width: 100%;
+        margin: $center;
 
-		display: grid;
-		grid-template-columns: 285px 1fr;
-		grid-gap: 25px;
-	}
+        display: grid;
+        grid-template-columns: 285px 1fr;
+        grid-gap: 25px;
+    }
+
+    @include huge {
+        width: $contain-width;
+        margin: $center;
+    }
 }
 
-.notice-wrapper{
-	display:none;
-}
-.notice-wrapper.showTab{
-	display:block;
+.notice-wrapper {
+    display: none;
 }
 
-.notice-section-title{
-	cursor: pointer;
-	text-transform: uppercase;
+.notice-wrapper.showTab {
+    display: block;
+}
+
+.notices-section-headings {
+    @include desktop {
+        padding-right: 25px;
+        border-right: 4px solid #dedede;
+    }
+}
+
+.notice-section-title {
+    cursor: pointer;
+    text-transform: uppercase;
     padding: 10px;
-	background: #fff;
+    background: #fff;
     margin-bottom: 8px;
     text-align: center;
-	border: 1px solid $yellow;
-	color: $yellow;
-	transition: all .2s;
-	&:last-of-type{
-		margin-bottom: 15px;
-	}
-	&:hover{
-		background: $yellow;
-		color: #fff;
-	}
-	@include huge{
-		margin-bottom: 15px;
-	}
+    border: 1px solid $yellow;
+    color: $yellow;
+    transition: all .2s;
+    &:last-of-type {
+        margin-bottom: 15px;
+    }
+    &:hover {
+        background: $yellow;
+        color: #fff;
+    }
+    @include desktop {
+        margin-bottom: 15px;
+    }
 }
 
 .notice-section-title.selected {
-    background: $yellow;    
+    background: $yellow;
     color: #fff;
     border: 1px solid $yellow;
 }
@@ -1066,77 +1105,85 @@ footer{
     letter-spacing: 1px;
 }
 
-.notice-details{
-	margin-top: 20px;
+.notice-details {
+    margin-top: 20px;
 }
+
+
 /*=====  End of Notices Section  ======*/
+
 
 /*===========================================
 =            Departments Section            =
 ===========================================*/
 
-.home-section.department{
-	@include desktop{
-		width: 100%;
-		margin: $center;
-		display: grid;
-		grid-template-columns: 1fr 40px 1fr;
-		grid-template-rows: 75px 1fr 30px;
-	}
-	@include huger{
-		width: 1800px;
-	}	
-	.department-image{
-		img{
-			display: block;
-			@include desktop{
-				border-right: 15px solid #fff;
-				border-bottom: 15px solid #fff;
-			}
-		}
-		@include desktop{
-			grid-column-start: 1;
-			grid-column-end: 3;
-			grid-row-start: 1;
-			grid-row-end: 3;			
-			position: relative;
-			z-index: 2;
-		}
-	}
-	.featured-department-wrapper{
-		background: $green;
-		color: #fff;
-		padding: 25px 15px;
-		@include desktop{
-			grid-column-start: 2;
-			grid-column-end: 4;
-			grid-row-start: 2;
-			grid-row-end: 4;
-			padding: 40px 70px;
-			h2.section-title{
-				width: auto;
-			}
-			p{
-				font-size: 18px;
-				line-height: 24px;
-			}
-			a.link-white{
-				display:block;
-				margin-bottom: 10px;
-			}
-		}
-	}
-	.section-subtitle{
-		line-height: 1em;
-	}
-	h2.section-title {
-	    color: #fff;
-	    &::before {
-	        content: none;
-	    }
-	}	
+.home-section.department {
+    @include desktop {
+        width: 100%;
+        margin: $center;
+        display: grid;
+        grid-template-columns: 1fr 80px 1fr;
+        grid-template-rows: 100%;
+    }
+    @include huger {
+        width: 1800px;
+    }
+    .department-image {
+        @include desktop {
+            object-fit: cover;
+            border-right: 15px solid #fff;
+            border-bottom: 15px solid #fff;
+            height: calc(100% - 100px);
+
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            position: relative;
+            z-index: 2;
+        }
+    }
+    .featured-department-wrapper {
+        background: $green;
+        color: #fff;
+        .featured-department--info {
+            padding: 25px 15px;
+            @include desktop{
+                padding-left: 50px;
+            }
+        }
+        @include desktop {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            padding: 40px 70px;
+            margin-top: 100px;
+
+            h2.section-title {
+                width: auto;
+            }
+            p {
+                font-size: 18px;
+                line-height: 24px;
+            }
+            a.link-white {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .section-subtitle {
+        line-height: 1em;
+    }
+    h2.section-title {
+        color: #fff;
+        &::before {
+            content: none;
+        }
+    }
 }
 
 
-/*=====  End of Departments Section  ======*/
 
+/*=====  End of Departments Section  ======*/
