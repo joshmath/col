@@ -363,6 +363,8 @@ footer {
 
 .hero {
     background: url(../images/hero-bg.jpg) no-repeat;
+    position: relative;
+    overflow:hidden;
     background-size: cover;
     background-position: center center;
     min-height: 200px;
@@ -381,7 +383,28 @@ footer {
     @include huge {
         height: 700px;
     }
+    video{
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left:0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    video:after {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(black, .2);
+      z-index: 1;
+    }
     .hero-content-wrapper {
+        z-index: 3;
         @include huge {
             margin: 0 auto;
             width: $contain-width;
@@ -585,6 +608,10 @@ footer {
         margin-top: 50px;
         margin-bottom: 75px;
     }
+    @include huge{
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .home-section {
@@ -722,11 +749,23 @@ footer {
     grid-row-end: 2;
     .featured-news--slide--title{
         position: absolute;
+        bottom: 0;
+        left: 0;
+        color: #fff;        
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(0,0,0,.75) 100%);
+        padding: 20px 10px 10px;
+        font-size: 1.5em;
+        line-height: 1.25em;
+        width: 100%;
+        @include desktop{
         bottom: 25px;
         left: 25px;
-        color: #fff;
+        padding: 0;
+        background: none;
         padding-right: 150px;
         font-size: 1.75em;
+        line-height: 1.5em;
+        }
     }
     img {
         @include desktop {

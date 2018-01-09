@@ -18,6 +18,9 @@
 </head>
 
 <body>
+    <div class="selected-meeting">
+           <h1>2</h1>    
+    </div>
     <header>
         <div class="secondary-info">
             <div class="logo-wrapper">
@@ -56,7 +59,8 @@
             </ul>
         </nav>
     </header>
-    <div class="hero">
+    <div class="hero">        
+        <video src="images/city_of_lubbock_-_hero_video_SD.mp4" poster="images/hero-bg.jpg" autoplay loop playsinline muted></video>        
         <div class="hero-content-wrapper">
             <h2>Lubbock is</h2>
             <h1 class="word-rotator">
@@ -207,7 +211,7 @@
                 </div>
             </div>
         </section>
-        <section class="home-section upcoming-meetings">
+        <section class="home-section upcoming-meetings">            
             <h2 class="section-title hide--huge">Upcoming Meetings</h2>
             <div class="upcoming-meetings-section-wrapper">
                 <div class="upcoming-meetings-video-wrapper">
@@ -219,8 +223,10 @@
                 <div class="upcoming-meetings-wrapper">
                     <h2 class="section-title">Upcoming Meetings</h2>
                     <div class="upcoming-meeting">
+                        <a href="">
                         <h3 class="upcoming-meeting--title">Regular City Council Meeting that wraps onto the second line</h3>
                         <h4 class="upcoming-meeting--details"><span class="upcoming-meeting--details--date">November 16, 2017</span> | <span class="upcoming-meeting--details--time">6:00 PM</span></h4>
+                        </a>
                     </div>
                     <div class="upcoming-meeting">
                         <h3 class="upcoming-meeting--title">Regular City Council Meeting</h3>
@@ -240,7 +246,7 @@
                     </div>
                     <a href="">View all Upcoming Meetings</a>
                 </div>
-            </div>
+            </div>            
         </section>
         <section class="home-section notices">
             <h2 class="section-title">Notices</h2>
@@ -317,7 +323,7 @@
                 </ul>
             </div>
         </div>
-    </footer>
+    </footer>    
     <!-- menu overlay -->
     <div id="overlay"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -370,6 +376,12 @@
                 }
             ]
         });
+
+        $('.upcoming-meeting a').click(function(e){
+            e.preventDefault();
+            $(this).toggleClass('read');
+            $('.selected-meeting').toggleClass('open');
+        })
     });
     </script>
 </body>
